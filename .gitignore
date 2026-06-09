@@ -1,33 +1,25 @@
-# Node modules
-/node_modules
+# Dependencies
+**/node_modules
+**/dist
+**/build
 
-# Compilation output
-/dist
+# Frontend (Next.js)
+frontend/.next/
+frontend/out/
+frontend/.env*.local
+frontend/next-env.d.ts
 
-# pnpm deploy output
-/bundle
+# Hardhat / Solidity
+cache/
+artifacts/
+ignition/deployments/
+typechain/
+coverage/
+coverage.json
 
-# Hardhat Build Artifacts
-/artifacts
-
-# Hardhat compilation (v2) support directory
-/cache
-
-# Typechain output
-/types
-
-# Hardhat coverage reports
-/coverage
-
-# Ignore anaconda & python cache
-.anaconda/
-__pycache__/
-*.pyc
-
-# Ignore VSCode settings
-.vscode/
-*.code-workspace
-
-# Ignore environment
+# Environment variables
 .env
-.venv/
+.env.local
+...
+
+# Logs, Editor files, OS files, dll
