@@ -1,55 +1,43 @@
 # ClassFund 🎓
 
-A simple smart contract built with Solidity to help manage class funds in a transparent way.  
-Members can contribute ETH, the treasurer can withdraw, and all transactions are recorded on-chain.
+**Decentralized Class Treasury Management System**
 
----
+A full-stack Web3 application combining Solidity smart contract + Next.js frontend.
 
-## ✨ Features
-- Add members at deployment
-- Contribute ETH directly to the contract
-- Track individual contributions
-- Treasurer-only withdrawal
-- Events for every payment & withdrawal
-- (WIP) Period system for monthly payments
+## 📁 Project Structure
 
----
+```
+class-fund/
+├── contracts/          # Solidity Smart Contracts (Hardhat)
+├── frontend/           # Next.js Frontend Application
+├── ignition/           # Hardhat deployment scripts
+├── scripts/            # Deployment & utility scripts
+├── test/               # Smart contract tests
+├── hardhat.config.ts
+├── README.md
+└── ... 
+```
 
-## 🛠 Tech Stack
-- **Solidity** (smart contract language)
-- **Remix IDE** (for development & deployment)
-- **Metamask** (to interact with contract)
-- **Sepolia Testnet** (for testing on Ethereum network)
+## 🚀 Quick Start
 
----
+### Backend (Smart Contract)
+```bash
+npm install
+npx hardhat compile
+npx hardhat test
+```
 
-## 🚀 How to Deploy
-1. Open [Remix IDE](https://remix.ethereum.org/).
-2. Create a new file `ClassFund.sol` and paste the contract code.
-3. Compile with Solidity ^0.8.0.
-4. In **Deploy & Run Transactions**:
-   - Select **Injected Provider - Metamask**.
-   - Choose **Sepolia Testnet** in Metamask.
-   - Add the member addresses in the constructor.
-   - Deploy the contract.
+### Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
----
+## Features
+- Transparent treasury management
+- Role-based access (Treasurer & Members)
+- Real-time blockchain events
+- Built with Hardhat + Next.js + Ethers.js
 
-## 💡 How to Use
-### Contribute
-- Set the `value` field in Remix (e.g. `0.1 ether`)  
-- Call `pay()` function  
-- Your contribution will be recorded automatically  
-
-### Withdraw (Treasurer only)
-- Call `withdraw(uint _amount)`  
-- `_amount` must be in **wei** (1 ether = 10^18 wei)  
-
----
-
-## 📸 Demo
-- Etherscan: [Contract on Sepolia](<https://sepolia.etherscan.io/address/0x43c9c8ced4655a2b7ee26d680935cb0d82bdf071#code>)  
-
----
-
-## 📂 Repo Structure
+See `frontend/README.md` for frontend details and `contracts/` for smart contract.
