@@ -2,42 +2,83 @@
 
 **Decentralized Class Treasury Management System**
 
-A full-stack Web3 application combining Solidity smart contract + Next.js frontend.
+A full-stack Web3 application for managing class funds transparently on blockchain.
+
+## ✨ Features
+
+- **Smart Contract**: Solidity + Hardhat (Treasury management with roles)
+- **Frontend**: Next.js 14 + TypeScript + Ethers.js
+- **Transparent**: All transactions recorded on-chain
+- **Role-based**: Treasurer & Member permissions
 
 ## 📁 Project Structure
 
-```
+```bash
 class-fund/
-├── contracts/          # Solidity Smart Contracts (Hardhat)
+├── contracts/          # Solidity Smart Contracts
 ├── frontend/           # Next.js Frontend Application
-├── ignition/           # Hardhat deployment scripts
-├── scripts/            # Deployment & utility scripts
-├── test/               # Smart contract tests
+├── ignition/           # Hardhat Ignition deployment
+├── scripts/            # Utility scripts
+├── test/               # Contract tests
 ├── hardhat.config.ts
-├── README.md
-└── ... 
+├── package.json        # Root monorepo scripts
+├── .gitignore
+└── README.md
 ```
 
 ## 🚀 Quick Start
 
-### Backend (Smart Contract)
+### 1. Clone & Install
 ```bash
+git clone https://github.com/saftanasdalihin/class-fund.git
+cd class-fund
 npm install
-npx hardhat compile
-npx hardhat test
 ```
 
-### Frontend
+### 2. Run Smart Contracts
 ```bash
-cd frontend
-npm install
+# Compile
+npm run contracts:compile
+
+# Test
+npm run test
+
+# Deploy (local)
+npm run contracts:deploy
+```
+
+### 3. Run Frontend
+```bash
 npm run dev
 ```
 
-## Features
-- Transparent treasury management
-- Role-based access (Treasurer & Members)
-- Real-time blockchain events
-- Built with Hardhat + Next.js + Ethers.js
+## 📋 Available Scripts (Root)
 
-See `frontend/README.md` for frontend details and `contracts/` for smart contract.
+```bash
+npm run dev                 # Start frontend
+npm run contracts:compile   # Compile Solidity
+npm run contracts:deploy    # Deploy contracts
+npm run test                # Run tests
+```
+
+## 🛠 Tech Stack
+
+**Backend**
+- Solidity
+- Hardhat
+- Ethers.js
+
+**Frontend**
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- Ethers.js / Web3
+
+## 📄 Documentation
+
+- [Smart Contracts](./contracts/)
+- [Frontend](./frontend/)
+
+---
+
+Made with ❤️ for transparent education funding.
